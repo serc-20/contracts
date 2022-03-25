@@ -1,0 +1,33 @@
+{
+  "name": "@serc-20/contracts",
+  "description": "Secure Smart Contract library for Ethereum",
+  "version": "1.0.0",
+  "files": [
+    "**/*.sol",
+    "/build/contracts/*.json",
+    "!/mocks/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serc-20/contracts.git"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "security",
+    "sERC20"
+  ],
+  "author": "Reflection <contact@serc20.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serc-20/contracts/issues"
+  },
+  "homepage": "https://www.serc20.com"
+}
