@@ -1,7 +1,7 @@
 {
   "name": "@serc-20/contracts",
   "description": "Secure Smart Contract library for Ethereum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "**/*.sol",
     "/build/contracts/*.json",
