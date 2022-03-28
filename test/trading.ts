@@ -20,7 +20,7 @@ describe("Trading", function () {
 
     await expect(
       deployedContract.sercSetTradingEnabled()
-    ).to.not.be.revertedWith("SERC20: Trading is already enabled");
+    ).to.not.be.revertedWith("sERC20: Trading is already enabled");
 
     enabled = await deployedContract.sercTradingEnabled();
 
@@ -36,14 +36,14 @@ describe("Trading", function () {
 
     await expect(
       deployedContract.sercSetTradingEnabled()
-    ).to.not.be.revertedWith("SERC20: Trading is already enabled");
+    ).to.not.be.revertedWith("sERC20: Trading is already enabled");
 
     enabled = await deployedContract.sercTradingEnabled();
 
     expect(enabled).to.be.equal(true);
 
     await expect(deployedContract.sercSetTradingEnabled()).to.be.revertedWith(
-      "SERC20: Trading is already enabled"
+      "sERC20: Trading is already enabled"
     );
 
     enabled = await deployedContract.sercTradingEnabled();

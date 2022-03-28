@@ -36,7 +36,7 @@ describe("Max Wallet", function () {
 
     await expect(
       deployedContract.sercSetMaxWallet("20000000000000000000000000")
-    ).to.be.revertedWith("SERC20: Can not lower the max wallet amount");
+    ).to.be.revertedWith("sERC20: Can not lower the max wallet amount");
   });
 
   it("Should revert when the new value is lower than the current max tx", async () => {

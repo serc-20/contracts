@@ -25,13 +25,13 @@ describe("Taxes", function () {
 
   it("Should revert when set above threshold", async () => {
     await expect(deployedContract.setBuyTax(30, 30)).to.be.revertedWith(
-      "SERC20: Round trip tax rate can not be set higher than 20%"
+      "sERC20: Tax rate can not be set higher than 15%"
     );
   });
 
   it("Should confirm when set below threshold", async () => {
     await expect(deployedContract.setBuyTax(5, 1)).to.not.be.revertedWith(
-      "SERC20: Round trip tax rate can not be set higher than 20%"
+      "sERC20: Tax rate can not be set higher than 15%"
     );
 
     const taxes = await deployedContract.sercBuyTax();
@@ -44,7 +44,7 @@ describe("Taxes", function () {
     let taxes;
 
     await expect(deployedContract.setBuyTax(5, 1)).to.not.be.revertedWith(
-      "SERC20: Round trip tax rate can not be set higher than 20%"
+      "sERC20: Tax rate can not be set higher than 15%"
     );
 
     taxes = await deployedContract.sercBuyTax();
@@ -53,7 +53,7 @@ describe("Taxes", function () {
     expect(taxes[1].toNumber()).to.be.equal(1);
 
     await expect(deployedContract.setBuyTax(30, 30)).to.be.revertedWith(
-      "SERC20: Round trip tax rate can not be set higher than 20%"
+      "sERC20: Tax rate can not be set higher than 15%"
     );
 
     taxes = await deployedContract.sercBuyTax();
